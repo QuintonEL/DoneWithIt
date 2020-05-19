@@ -1,18 +1,28 @@
 import React from "react";
-import { StyleSheet, Text, View, Image, SafeAreaView } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  TouchableHighlight,
+  SafeAreaView,
+} from "react-native";
 
 export default function App() {
-  const handlePress = () => console.log('text pressed');
+  const handlePress = () => console.log("text pressed");
 
   return (
     <SafeAreaView style={styles.container}>
-      <Text numberOfLines={1} onPress={handlePress}>
-        Hello World!
-      </Text>
-      <Image source={{
-        width: 200,
-        height: 300,
-        uri: "https://picsum.photos/200/300"}}/>
+      <Text onPress={handlePress}>Hello World!</Text>
+      <TouchableHighlight onPress={() => console.log('pressed')}>
+        <Image
+          source={{
+            width: 200,
+            height: 300,
+            uri: "https://picsum.photos/200/300",
+          }}
+        />
+      </TouchableHighlight>
     </SafeAreaView>
   );
 }
