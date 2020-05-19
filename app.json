@@ -23,6 +23,8 @@
     ],
     "ios": {
       "supportsTablet": true
-    }
+    },
+    "description": "A marketplace for selling the stuff you don't need anymore.",
+    "githubUrl": "https://github.com/QuintonEL/DoneWithIt"
   }
 }
