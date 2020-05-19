@@ -1,23 +1,26 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, Image, SafeAreaView } from "react-native";
 
 export default function App() {
   const handlePress = () => console.log('text pressed');
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Text numberOfLines={1} onPress={handlePress}>
-        Hello World! This is going to be a really long text. Now I want to make
-        this even longer than this and see what happens
+        Hello World!
       </Text>
-    </View>
+      <Image source={{
+        width: 200,
+        height: 300,
+        uri: "https://picsum.photos/200/300"}}/>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "dodgerblue",
+    backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
   },
