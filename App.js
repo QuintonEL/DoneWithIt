@@ -4,7 +4,7 @@ import {
   Text,
   View,
   Image,
-  TouchableHighlight,
+  TouchableNativeFeedback,
   SafeAreaView,
 } from "react-native";
 
@@ -14,15 +14,11 @@ export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       <Text onPress={handlePress}>Hello World!</Text>
-      <TouchableHighlight onPress={() => console.log('pressed')}>
-        <Image
-          source={{
-            width: 200,
-            height: 300,
-            uri: "https://picsum.photos/200/300",
-          }}
-        />
-      </TouchableHighlight>
+      <TouchableNativeFeedback onPress={() => console.log("pressed")}>
+        <View
+          style={{ width: 200, height: 200, backgroundColor: "dodgerblue" }}
+        ></View>
+      </TouchableNativeFeedback>
     </SafeAreaView>
   );
 }
