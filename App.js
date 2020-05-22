@@ -12,17 +12,12 @@ import Screen from "./app/components/Screen";
 import Icon from "./app/components/Icon";
 import ListItem from "./app/components/ListItem";
 import ListingsScreen from "./app/screens/ListingsScreen";
+import AppTextInput from "./app/components/AppTextInput";
 
 export default function App() {
-  const [firstName, setFirstName] = useState("");
   return (
     <Screen>
-      <Text>{firstName}</Text>
-      <TextInput
-        onChangeText={(text) => setFirstName(text)}
-        placeholder="First Name"
-        style={{ borderBottomColor: "#ccc", borderBottomWidth: 1 }}
-      />
+      <AppTextInput placeholder="Username" icon="email" />
     </Screen>
   );
 }
